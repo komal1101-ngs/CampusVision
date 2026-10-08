@@ -8,7 +8,7 @@ import {
   UserRole,
 } from '../../shared/types';
 
-const API_BASE = '/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api';
 
 /**
  * Gets authentication and role headers from localStorage or session
