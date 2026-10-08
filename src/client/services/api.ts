@@ -8,7 +8,7 @@ import {
   UserRole,
 } from '../../shared/types';
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || (import.meta.env.PROD ? 'https://campusvision-1.onrender.com/api' : '/api');
 
 /**
  * Gets authentication and role headers from localStorage or session
