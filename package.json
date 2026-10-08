@@ -8,6 +8,8 @@
     "dev:client": "vite",
     "dev:server": "tsx watch src/server/index.ts",
     "build": "tsc && vite build",
+    "build:server": "tsc --project tsconfig.server.json",
+    "start": "tsx src/server/index.ts",
     "lint": "tsc --noEmit",
     "preview": "vite preview",
     "db:seed": "tsx src/server/scripts/seed.ts"

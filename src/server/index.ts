@@ -99,9 +99,9 @@ app.patch(
 app.get('/api/dashboard/stats', requireAuth, getDashboardStats);
 app.get('/api/users', requireAuth, getUsers);
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`[VisionCampus Server] Running on http://localhost:${PORT}`);
+// Start server — bind to 0.0.0.0 so Render can route external traffic
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`[VisionCampus Server] Running on http://0.0.0.0:${PORT}`);
   console.log(`[VisionCampus Server] Ready for AI Visual Inspection requests.`);
 });
 
